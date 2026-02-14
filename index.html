@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Qawaa'id al-Muthlaa: Scholarly Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .principle-card { transition: all 0.2s ease; border-left-width: 4px; border-color: #e2e8f0; margin-bottom: 1.5rem; }
+        .principle-card:hover { transform: translateX(5px); border-color: #3b82f6; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .tab-active { border-bottom: 3px solid #3b82f6; color: #3b82f6; font-weight: bold; }
+        .scholarly-box { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 12px; margin-top: 12px; font-size: 0.95rem; line-height: 1.7; color: #334155; }
+        .arabic-term { color: #1e40af; font-weight: bold; background: #dbeafe; padding: 2px 8px; border-radius: 6px; font-style: italic; font-family: serif; }
+        .chapter-header { border-bottom: 2px solid #cbd5e1; margin-bottom: 1.5rem; padding-bottom: 0.5rem; color: #0f172a; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 1rem; }
+        .logic-point { border-left: 3px solid #3b82f6; padding-left: 12px; margin-top: 10px; font-style: italic; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+
+    <header class="gradient-bg text-white py-12 px-4 shadow-2xl sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tight">Al-Qawaa'id al-Muthlaa <span class="text-blue-400">Scholarly</span></h1>
+                <p class="text-slate-400 font-medium">Detailed Analysis & Linguistic Roots</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="showSection('study')" class="bg-blue-600 px-5 py-2 rounded-lg font-bold shadow-lg hover:bg-blue-500 transition">Study Guide</button>
+                <button onclick="showSection('glossary')" class="bg-indigo-600 px-5 py-2 rounded-lg font-bold shadow-lg hover:bg-indigo-500 transition">Linguistic Glossary</button>
+                <button onclick="showSection('refute')" class="bg-red-600 px-5 py-2 rounded-lg font-bold shadow-lg hover:bg-red-500 transition">Scholarly Refutations</button>
+                <button onclick="showSection('quiz')" class="bg-emerald-600 px-5 py-2 rounded-lg font-bold shadow-lg hover:bg-emerald-500 transition">Final Exam</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+        
+        <!-- STUDY GUIDE SECTION -->
+        <section id="study-section" class="block">
+            <div class="flex overflow-x-auto gap-8 mb-8 border-b border-slate-200 pb-2">
+                <button onclick="filterContent('names')" id="tab-names" class="tab-btn tab-active pb-2">I. Rules of Names</button>
+                <button onclick="filterContent('attrs')" id="tab-attrs" class="tab-btn pb-2 text-slate-500">II. Rules of Attributes</button>
+                <button onclick="filterContent('evid')" id="tab-evid" class="tab-btn pb-2 text-slate-500">III. Rules of Evidence</button>
+                <button onclick="filterContent('uluww')" id="tab-uluww" class="tab-btn pb-2 text-slate-500">IV. Aloftness & Withness</button>
+            </div>
+
+            <div id="content-container">
+                <!-- NAMES CONTENT -->
+                <div id="cat-names" class="category-content space-y-8">
+                    <h3 class="chapter-header">Detailed Analysis: Rules of the Names</h3>
+                    
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">1. The Concept of <span class="arabic-term">Al-Husna</span></h4>
+                        <div class="scholarly-box">
+                            <strong>Scholarly Meaning:</strong> This is the feminine superlative of <em>Ahsan</em> (The Best). It implies that Allah's names are not merely "good" but have reached the absolute pinnacle of beauty and perfection.
+                            <div class="logic-point">Logic: If a name could even potentially carry a negative connotation (e.g., 'The Schemer' without context), it cannot be a Name for Allah, because that would contradict the state of being <em>Husna</em>.</div>
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">2. Dual Function: <span class="arabic-term">A'laam</span> & <span class="arabic-term">Awsaf</span></h4>
+                        <div class="scholarly-box">
+                            <strong>Scholarly Meaning:</strong> Names are both "Proper Nouns" (referring to His Essence) and "Descriptions" (referring to His Attributes). 
+                            <br><br>
+                            <strong>Theological Impact:</strong> This refutes the <em>Mu'tazilah</em>. They claimed names were just labels with no meaning. We argue that a name like "Al-Aleem" (The All-Knowing) is only true if the quality of Knowledge (<span class="arabic-term">'Ilm</span>) actually exists.
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">3. Three Pillars of Belief in Transitive Names</h4>
+                        <div class="scholarly-box">
+                            When a Name is transitive (affects others), belief is not complete until you affirm:
+                            <ul class="list-disc ml-6 mt-2 space-y-1">
+                                <li><strong>The Name:</strong> e.g., Ar-Raheem.</li>
+                                <li><strong>The Attribute:</strong> That He possesses Mercy.</li>
+                                <li><strong>The Ruling (<span class="arabic-term">Hukm</span>):</strong> That He actually shows mercy to His creation.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">4. Linguistic Pointers (<span class="arabic-term">Dalalah</span>)</h4>
+                        <div class="scholarly-box">
+                            How names point to meaning:
+                            <ol class="list-decimal ml-6 mt-2 space-y-2">
+                                <li><strong>Correspondence (<span class="arabic-term">Mutabaqah</span>):</strong> Using "Al-Khaliq" to mean the Being AND His Creation.</li>
+                                <li><strong>Inclusion (<span class="arabic-term">Tadam-mun</span>):</strong> Using "Al-Khaliq" to refer specifically to His Attribute of Creating.</li>
+                                <li><strong>Implication (<span class="arabic-term">Il-tizaam</span>):</strong> Understanding that "Al-Khaliq" requires Him to have Knowledge and Power.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ATTRIBUTES CONTENT -->
+                <div id="cat-attrs" class="category-content hidden space-y-8">
+                    <h3 class="chapter-header">Detailed Analysis: Rules of the Attributes</h3>
+                    
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">1. Absolute vs. Contextual Perfection</h4>
+                        <div class="scholarly-box">
+                            Attributes like Life and Knowledge are <em>Absolute Perfection</em>. However, attributes like "Plotting" (<span class="arabic-term">Makr</span>) are only perfect when used as a just response to the wicked. 
+                            <div class="logic-point">Rule: Allah is not described with these "Action" attributes generally, only in specific response to show His ultimate power and justice.</div>
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">2. The Relationship Between Names and Attributes</h4>
+                        <div class="scholarly-box">
+                            The "Field of Attributes" is much broader than the "Field of Names." 
+                            <br><br>
+                            <strong>Example:</strong> We describe Allah with the attribute of "Coming" or "Descending" based on authentic texts, but we do not derive the Name "The Comer" or "The Descender" for Him. Names require specific textual evidence as titles.
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-xl mb-2">3. Affirmation of the Opposite in Negation</h4>
+                        <div class="scholarly-box">
+                            When Allah negates a flaw for Himself (e.g., "Neither sleep nor slumber overtakes Him"), the goal is not just to say He doesn't sleep. The goal is to prove the <strong>perfect opposite</strong>: that His Life and Self-Sustaining power (<span class="arabic-term">Qayyumiyyah</span>) are so perfect that fatigue is impossible.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVIDENCE CONTENT -->
+                <div id="cat-evid" class="category-content hidden space-y-8">
+                    <h3 class="chapter-header">Detailed Analysis: Rules of the Textual Evidences</h3>
+                    
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm border-blue-600">
+                        <h4 class="font-bold text-xl mb-2">Rule 1: Primacy of the Literal (<span class="arabic-term">Ad-Dhahir</span>)</h4>
+                        <div class="scholarly-box">
+                            Since the Quran was revealed in "Plainly Evident Arabic" (<span class="arabic-term">Lisanun Arabiyyun Mubeen</span>), we must accept the meanings as they are understood in that language. 
+                            <div class="logic-point">Scholarly Logic: To say the "literal" meaning is not intended without a proof is to claim that Allah spoke in riddles, which contradicts the purpose of guidance.</div>
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm border-blue-600">
+                        <h4 class="font-bold text-xl mb-2">Rule 2: Refuting False Interpretation (<span class="arabic-term">Ta'weel</span>)</h4>
+                        <div class="scholarly-box">
+                            <em>Ta'weel</em> is only valid if supported by another clear text. Without text, it is merely <em>Tahreef</em> (distortion). 
+                            <br><br>
+                            <strong>Example:</strong> Changing "Hand" to "Power" is rejected because "Hand" in Arabic has a specific meaning, and there is no text saying "My Hand actually means My Power."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALOFTNESS CONTENT -->
+                <div id="cat-uluww" class="category-content hidden space-y-8">
+                    <h3 class="chapter-header">Detailed Analysis: Aloftness & Withness</h3>
+                    
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm border-emerald-600">
+                        <h4 class="font-bold text-xl mb-2">The Hierarchy of Proofs for <span class="arabic-term">Uluww</span></h4>
+                        <div class="scholarly-box">
+                            Allah's being "Above" is proven through four distinct avenues:
+                            <ul class="list-disc ml-6 mt-2 space-y-2">
+                                <li><strong>The Fitrah:</strong> The innate, natural inclination. Every human instinctively looks up when calling upon the Creator.</li>
+                                <li><strong>The Intellect (<span class="arabic-term">'Aql</span>):</strong> Height is a quality of perfection; lowliness is a deficiency.</li>
+                                <li><strong>The Revelation:</strong> Over 1,000 evidences in the Quran and Sunnah.</li>
+                                <li><strong>Consensus (<span class="arabic-term">Ijma'</span>):</strong> The early generations agreed He is above the Throne.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="principle-card bg-white p-6 rounded-xl shadow-sm border-emerald-600">
+                        <h4 class="font-bold text-xl mb-2">The "Withness" (<span class="arabic-term">Ma'iyyah</span>) Paradox</h4>
+                        <div class="scholarly-box">
+                            Does being "With" creation contradict being "Above" it?
+                            <br><br>
+                            <strong>Scholarly Answer:</strong> No. In Arabic, you can say "We traveled while the Moon was with us." The Moon is in the sky, yet it is "with" you by its light and guidance. Similarly, Allah is Above His Throne, but "with" His creation through His Knowledge, Seeing, and Hearing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FULL GLOSSARY -->
+        <section id="glossary-section" class="hidden">
+            <h2 class="text-2xl font-bold mb-6">Scholarly & Linguistic Glossary</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="arabic-term">At-Tahreef</span>
+                    <p class="mt-2 text-sm text-slate-600"><strong>Linguistic:</strong> To change or slant. <strong>Technical:</strong> Changing a text's wording or meaning to avoid its true implication.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="arabic-term">At-Ta'teel</span>
+                    <p class="mt-2 text-sm text-slate-600"><strong>Linguistic:</strong> To leave something empty (like an abandoned well). <strong>Technical:</strong> Stripping Allah of His Names and Attributes entirely.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="arabic-term">At-Takyeef</span>
+                    <p class="mt-2 text-sm text-slate-600"><strong>Linguistic:</strong> Defining a state/nature. <strong>Technical:</strong> Attempting to specify <em>how</em> an attribute is (e.g., imagining the physical shape of a Divine attribute).</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="arabic-term">At-Tamtheel</span>
+                    <p class="mt-2 text-sm text-slate-600"><strong>Linguistic:</strong> To make a model or likeness. <strong>Technical:</strong> Claiming that Allah's attributes are exactly like the attributes of creation.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="arabic-term">Al-Ilhaad</span>
+                    <p class="mt-2 text-sm text-slate-600"><strong>Linguistic:</strong> To lean away or deviate (like a grave's side-pocket/<em>Lahd</em>). <strong>Technical:</strong> Deviating from the correct belief regarding the Names.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="arabic-term">Tawqeefiyyah</span>
+                    <p class="mt-2 text-sm text-slate-600"><strong>Linguistic:</strong> To stop. <strong>Technical:</strong> The principle that we must "stop" where the Revelation stopped and not invent new names.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFUTATIONS -->
+        <section id="refute-section" class="hidden">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Detailed Group Refutations</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl border-l-8 border-red-500 shadow-lg">
+                    <h3 class="font-bold text-xl">The Mu'tazilah (The Rationalists)</h3>
+                    <div class="scholarly-box">
+                        <strong>Their Claim:</strong> To affirm attributes is to affirm "multiple eternal beings," which is Shirk.
+                        <br><br>
+                        <strong>The Refutation:</strong> An attribute is not a separate being; it is a quality of the Being. A person with sight, hearing, and speech is still one person. Denying the attributes leads to worshipping an "Absolute Void" which cannot exist.
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border-l-8 border-slate-700 shadow-lg">
+                    <h3 class="font-bold text-xl">The Mufawwidah (The Agnostics)</h3>
+                    <div class="scholarly-box">
+                        <strong>Their Claim:</strong> We don't know the meaning of the words at all; they are like "A.L.M." (secret letters).
+                        <br><br>
+                        <strong>The Refutation:</strong> This is the most dangerous claim. It implies the Prophet (pbuh) spoke words he didn't understand. We say: We <strong>do</strong> know the linguistic meaning, we just don't know the physical <strong>how</strong> (<span class="arabic-term">Kayfiyyah</span>).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz-section" class="hidden">
+            <div id="quiz-container" class="bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto">
+                <div id="question-box">
+                    <span id="quiz-progress" class="text-blue-600 font-bold">Scholarly Exam: 1/10</span>
+                    <p id="question-text" class="text-xl font-bold mb-6 mt-2 text-slate-800"></p>
+                    <div id="options" class="space-y-3"></div>
+                    <div id="feedback" class="mt-6 p-4 rounded-xl hidden"></div>
+                    <button id="next-btn" onclick="nextQuestion()" class="mt-6 w-full bg-blue-600 text-white py-4 rounded-xl font-bold hidden">Next Challenge</button>
+                </div>
+                <div id="result-box" class="hidden text-center">
+                    <h3 class="text-3xl font-bold mb-4">Mastery Achieved!</h3>
+                    <p id="final-score" class="text-xl mb-6 font-bold"></p>
+                    <button onclick="startQuiz()" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold">Retake Exam</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const quizData = [
+            { q: "What is the linguistic root of 'Ilhaad'?", a: ["To be strong", "To lean away/deviate", "To forget"], c: 1, exp: "Linguistically it means to lean away. In a grave, the 'Lahd' is the pocket that leans to the side." },
+            { q: "Why is Ta'weel (without proof) called Tahreef?", a: ["Because it's easier", "Because it distorts the true meaning", "Because it's a new name"], c: 1, exp: "Tahreef is the actual act of distortion, while Ta'weel is the name interpretators give to their distortion." },
+            { q: "What does 'Mutabaqah' (Correspondence) refer to?", a: ["The name matches the Essence and Attribute together", "The name matches only the Attribute", "The name matches only the Essence"], c: 0, exp: "Correspondence means the name points to the whole thing (The Being and the quality)." },
+            { q: "How does the 'Sunlight Analogy' defend Ma'iyyah?", a: ["Shows Allah is like light", "Shows He can be with us while being Above", "Explains creation"], c: 1, exp: "Just as the sun is in the sky but 'with' you by its light, Allah is Above but 'with' you by Knowledge." },
+            { q: "What is the linguistic meaning of 'Ta'teel'?", a: ["To change", "To leave empty/vacant", "To praise"], c: 1, exp: "An abandoned well is called 'Mu'attal' because it is empty of use; this is like denying attributes." },
+            { q: "Which group claims the Prophet didn't know the meanings of the Attributes?", a: ["The Mu'tazilah", "The Mufawwidah", "The Salaf"], c: 1, exp: "The Mufawwidah claim even the Prophet didn't know the meanings, which is a great insult to his message." },
+            { q: "What is 'Kayfiyyah'?", a: ["The linguistic meaning", "The mechanical 'how' or physical nature", "The proof"], c: 1, exp: "Kayfiyyah refers to the physical reality, which is known only to Allah." },
+            { q: "Why are some attributes like 'Plotting' only contextual?", a: ["Because they are always bad", "They are only perfect as a just response", "They are metaphors"], c: 1, exp: "Plotting is a perfection when it outsmarts a wicked person, but a flaw if started against an innocent." },
+            { q: "What is 'Il-tizaam' (Implication)?", a: ["A logical requirement of a name", "A literal meaning", "A secret code"], c: 0, exp: "Implication is what the name logically requires (e.g., The Creator must imply Knowledge)." },
+            { q: "What is the definition of 'Al-Husna'?", a: ["Pretty names", "The absolute pinnacle of beauty/perfection", "Old names"], c: 1, exp: "It is the feminine superlative, meaning no better beauty exists." }
+        ];
+
+        let currentQuestion = 0; let score = 0;
+
+        function showSection(type) {
+            document.querySelectorAll('main > section').forEach(s => s.classList.add('hidden'));
+            document.getElementById(type + '-section').classList.remove('hidden');
+            if(type === 'quiz') startQuiz();
+            window.scrollTo(0,0);
+        }
+
+        function filterContent(cat) {
+            document.querySelectorAll('.category-content').forEach(c => c.classList.add('hidden'));
+            document.getElementById('cat-' + cat).classList.remove('hidden');
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active', 'text-blue-600'));
+            document.getElementById('tab-' + cat).classList.add('tab-active', 'text-blue-600');
+        }
+
+        function startQuiz() {
+            currentQuestion = 0; score = 0;
+            document.getElementById('question-box').classList.remove('hidden');
+            document.getElementById('result-box').classList.add('hidden');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const data = quizData[currentQuestion];
+            document.getElementById('quiz-progress').innerText = `Scholarly Exam: ${currentQuestion + 1}/10`;
+            document.getElementById('question-text').innerText = data.q;
+            document.getElementById('feedback').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+            const opts = document.getElementById('options');
+            opts.innerHTML = '';
+            data.a.forEach((opt, i) => {
+                const b = document.createElement('button');
+                b.className = "w-full text-left p-4 border-2 rounded-xl hover:bg-blue-50 transition border-slate-200 font-medium";
+                b.innerText = opt;
+                b.onclick = () => {
+                    if(i === data.c) score++;
+                    const fb = document.getElementById('feedback');
+                    fb.innerHTML = `<strong>${i === data.c ? "✅ Correct!" : "❌ Incorrect."}</strong><br>${data.exp}`;
+                    fb.className = "mt-6 p-4 rounded-xl block text-sm " + (i === data.c ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800");
+                    fb.classList.remove('hidden');
+                    document.getElementById('next-btn').classList.remove('hidden');
+                    opts.querySelectorAll('button').forEach(btn => btn.disabled = true);
+                };
+                opts.appendChild(b);
+            });
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < quizData.length) renderQuestion();
+            else {
+                document.getElementById('question-box').classList.add('hidden');
+                document.getElementById('result-box').classList.remove('hidden');
+                document.getElementById('final-score').innerText = `Scholarly Rank: ${score}/10 Correct`;
+            }
+        }
+    </script>
+</body>
+</html>
